@@ -1,0 +1,82 @@
+{
+  "name": "ukiyojs",
+  "version": "4.2.0",
+  "description": "⛰️ Dynamic, modern, and efficient background parallax effect.",
+  "homepage": "https://yitengjun.github.io/ukiyo-js/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yitengjun/ukiyojs.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "main": "./dist/ukiyo.esm.min.js",
+  "umd:main": "./dist/ukiyo.umd.min.js",
+  "module": "./dist/ukiyo.esm.min.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/ukiyo.esm.min.js",
+      "umd": "./dist/ukiyo.umd.min.js",
+      "default": "./dist/ukiyo.esm.min.js"
+    }
+  },
+  "keywords": [
+    "parallax",
+    "scroll",
+    "background-image",
+    "effects",
+    "parallax-scrolling",
+    "background-parallax"
+  ],
+  "author": "Yiteng Jun <yiteng.work@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "serve": "browser-sync start --config \"./.bs-config.cjs\"",
+    "test": "vitest",
+    "format": "prettier --write \"./src/**/*.ts\" \"./{*.cjs,*.ts,*.js,*.json}\" \"./tests/**/*.ts\" \"./docs/**/{*.html,*.css}\" \"./tests/demo/**/{*.html,*.css}\"",
+    "lint": "eslint  \"./src/**/*.ts\" --fix",
+    "build": "rollup -c",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-terser": "^0.2.1",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "browser-sync": "^3.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "happy-dom": "^10.0.3",
+    "prettier": "^2.8.8",
+    "rollup": "^2.79.1",
+    "semantic-release": "^19.0.3",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.4",
+    "vitest": "^0.33.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
+  },
+  "files": [
+    "dist"
+  ]
+}
