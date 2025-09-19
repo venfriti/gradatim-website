@@ -83,10 +83,10 @@ function startLoader() {
   }
   updateCounter();
 }
-startLoader();
+// startLoader();
 
 imgLoad.on('done', instance => {
-  hideLoader();
+  // hideLoader();
   pageAppearance();
 });
 
